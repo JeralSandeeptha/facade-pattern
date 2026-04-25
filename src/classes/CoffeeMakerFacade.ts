@@ -8,10 +8,10 @@ class CoffeeMakerFacade {
     private brewer: Brewer;
     private boilder: Biolder;
 
-    constructor() {
-        this.grinder = new Grinder();
-        this.brewer = new Brewer();
-        this.boilder = new Biolder();
+    constructor(grinder: Grinder, boilder: Biolder, brewer: Brewer) {
+        this.grinder = grinder;
+        this.brewer = brewer;
+        this.boilder = boilder;
     }
 
     public makeCoffee() {
